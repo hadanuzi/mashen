@@ -6,19 +6,19 @@ html {
 
 body {
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .home { height: 100%; }
 
 .nav { color: #d09e42; }
 
-.container {
-    height: 100%;
-}
+.container { height: 100%; }
 
 .vertical-center {
+    position: absolute;
+    min-height: calc(100% - 67px);
     top: 67px;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
