@@ -24,6 +24,11 @@
   <link rel="stylesheet" href="./assets/css/styles.css">
   <link rel="stylesheet" href="./assets/css/custom.css">
 
+  <!-- Scripts
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="./assets/js/site.js"></script>
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <!--<link rel="icon" type="image/png" href="./assets/images/favicon.png">-->
@@ -33,7 +38,7 @@
 
   <!-- Navbar
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <nav class="navbar">
+  <nav class="full-nav navbar">
     <div class="container">
       <ul class="navbar-list">
         <li class="navbar-item"><a class="navbar-link" href="./index.html">Home</a></li>
@@ -42,6 +47,38 @@
         <li class="navbar-item"><a class="navbar-link" href="./schedule.html">Schedule</a></li>
         <li class="navbar-item"><a class="navbar-link" href="./lodging.html">Lodging</a></li>
         <li class="navbar-item"><a class="navbar-link" href="./registry.html">Registry</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="mobile-nav navbar">
+    <div class="container">
+      <ul class="navbar-list">
+        <li class="navbar-item">
+          <a class="navbar-link" href="#" data-popover="#codeNavPopover">Menu</a>
+          <div id="codeNavPopover" class="popover">
+            <ul class="popover-list">
+              <li class="popover-item">
+                <a class="popover-link" href="./index.html">Home</a>
+              </li>
+              <li class="popover-item">
+                <a class="popover-link" href="./rsvp.html">RSVP</a>
+              </li>
+              <li class="popover-item">
+                <a class="popover-link" href="./our_story.html">Our Story</a>
+              </li>
+              <li class="popover-item">
+                <a class="popover-link" href="./schedule.html">Schedule</a>
+              </li>
+              <li class="popover-item">
+                <a class="popover-link" href="./lodging.html">Lodging</a>
+              </li>
+              <li class="popover-item">
+                <a class="popover-link" href="./registry.html">Registry</a>
+              </li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
