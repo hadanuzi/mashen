@@ -1,5 +1,5 @@
 html {
-    background-color: #0a102b;
+    background-color: #051d35;
     color: #efefef;
     height: 100%;
 }
@@ -13,14 +13,29 @@ body {
 
 .nav { color: #d09e42; }
 
-.container { height: 100%; }
-
-.vertical-center {
-    position: absolute;
-    min-height: calc(100% - 67px);
+.page {
     top: 67px;
     display: flex;
     flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    min-height: calc(100% - 67px);
+}
+
+.image {
+    padding-bottom: 3%;
+}
+
+.vertical-center {
+    margin: 5% 0px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    min-height: 100%;
+}
+
+.vertical-center-page {
     justify-content: center;
 }
 
@@ -34,3 +49,7 @@ body {
 }
 
 .unstyled-ul h5 { margin-bottom: 1rem; }
+
+.heading-center {
+    text-align: center;
+}
