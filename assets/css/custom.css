@@ -91,6 +91,9 @@
 
 /* Larger than phone */
 @media (min-width: 550px) {
+  .side-by-side {
+    display: flex;
+  }
   .header {
     margin-top: 18rem; }
   .value-props {
