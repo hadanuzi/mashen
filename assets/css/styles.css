@@ -26,6 +26,15 @@ body {
     padding-bottom: 3%;
 }
 
+.unstyled-ul {
+    list-style: none;
+    margin-top: 2.5rem;
+}
+
+.no-spacing {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 .vertical-center {
     margin: 5% 0px;
     display: flex;
@@ -39,10 +48,6 @@ body {
     justify-content: center;
 }
 
-.unstyled-ul {
-    list-style: none;
-    margin-top: 2.5rem;
-}
 
 .unstyled-ul li {
     margin: 0;
