@@ -9,7 +9,7 @@ $(document).ready(function() {
     }, {});
     var password = data.password;
     $.ajax({
-      url: "http://localhost:3000/" + password,
+      url: "https://rocky-waters-77986.herokuapp.com/" + password,
       method: "GET"
     })
     .done(function(data) {
@@ -106,7 +106,7 @@ $(document).ready(function() {
       const rsvp = createRSVP(data, foodData);
       $.ajax({
         type: "POST",
-        url: "http://localhost:3000/" + data.password,
+        url: "https://rocky-waters-77986.herokuapp.com/" + data.password,
         data: JSON.stringify(rsvp),
         contentType: 'application/json',
         dataType: 'json',
@@ -138,7 +138,7 @@ $(document).ready(function() {
     console.log('rsvp', rsvp)
     $.ajax({
       type: "POST",
-      url: "http://localhost:3000/" + data.password,
+      url: "https://rocky-waters-77986.herokuapp.com/" + data.password,
       data: JSON.stringify(rsvp),
       contentType: 'application/json'
     }).done(function() {
