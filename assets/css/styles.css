@@ -59,8 +59,37 @@ body {
     margin: 0;
 }
 
+textarea, input {
+    color: #051d35;
+}
+
 .unstyled-ul h5 { margin-bottom: 1rem; }
 
 .heading-center {
     text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.name {
+    margin-bottom: 15px;
+}
+
+.attendance {
+    margin-bottom: 30px;
+}
+
+label .label {
+    margin: 0 25px;
+}
+
+small.label-body {
+    margin-left: 20px;
+}
+
+span.label-body {
+    margin-bottom: 0px;
+    color: #d09e42;
 }

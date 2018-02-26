@@ -28,6 +28,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="./assets/js/site.js"></script>
+  <script src="./assets/js/rsvp.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -88,7 +89,42 @@
   <div class="container page">
     <div class="vertical-center">
       <h1>RSVP</h1>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfdWJDZ4N2YJ23gBnhenfF4mdbkyKGqcN88-tTJnbOKxLhz6Q/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+      <div class="password-form">
+        <form id="password-form">
+          <div class="eight columns">
+            <p>
+              Please input your password.
+              Your code is your last name and first 2 letters of your first name, all lowercase, no spaces.
+            </p>
+            <input class="u-full-width" type="text" placeholder="password" name="password">
+            <input class="button-primary" type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+      <div class="rsvp-form hidden">
+        <form id="rsvp-form">
+          <div id="dynamic-form">
+          </div>
+          <input class="button-primary" type="submit" value="Next">
+        </form>
+      </div>
+      <div class="food-form hidden">
+        <form id="food-form">
+          <div id="dynamic-food-form">
+          </div>
+          <input class="button-primary" type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="thank-you hidden">
+        <p>
+          Thank you for RSVP-ing! If you need anything else, please contact us!
+        </p>
+      </div>
+      <div class="error hidden">
+        <p>
+          Something went wrong! Please try again later or contact us if it persists.
+        </p>
+      </div>
     </div>
   </div>
 
