@@ -15,14 +15,14 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee" rel="stylesheet">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="./assets/css/normalize.css">
   <link rel="stylesheet" href="./assets/css/skeleton.css">
-  <link rel="stylesheet" href="./assets/css/styles.css">
   <link rel="stylesheet" href="./assets/css/custom.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
 
   <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -35,20 +35,24 @@
   <link rel="icon" type="image/png" href="./assets/images/favicon.ico">
 
 </head>
-<body class="has-docked-nav">
+<body>
 
   <!-- Navbar
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <nav class="full-nav navbar">
     <div class="container">
-      <ul class="navbar-list">
-        <li class="navbar-item"><a class="navbar-link" href="./index.html">Home</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="./our_story.html">Our Story</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="./schedule.html">Schedule</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="./lodging.html">Lodging</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="./registry.html">Registry</a></li>
-        <li class="navbar-item"><a class="navbar-link" href="./contact_us.html">Contact Us</a></li>
+      <img class="u-max-full-width" src="./assets/images/header.png" alt="header image">
+      <div><h2 class="names center-text">JEN & DAVID</h2></div>
+      <ul class="center navbar-list">
+          <li class="navbar-item"><a class="navbar-link" href="./index.html">HOME</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="#"><strong>RSVP</strong></a></li>
+        <li class="navbar-item"><a class="navbar-link" href="./our_story.html">OUR STORY</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="./schedule.html">SCHEDULE</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="./lodging.html">LODGING</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="./registry.html">REGISTRY</a></li>
+        <li class="navbar-item"><a class="navbar-link" href="./contact_us.html">CONTACT US</a></li>
       </ul>
+    <hr class="line"></div>
     </div>
   </nav>
 
@@ -85,20 +89,20 @@
   </nav>
 
   <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  ––––––––––––––––––––––––––––––––––––––––––––––––––-->
   <div class="container page">
-    <div class="vertical-center">
-      <h1>RSVP</h1>
+    <div class="vertical-center center-text">
+      <h1>You're Invited</h1>
       <div class="password-form">
         <form id="password-form">
-          <div class="eight columns">
-            <p>
-              Please input your password.
-              Your code is your last name and first 2 letters of your first name, all lowercase, no spaces.
-            </p>
-            <input class="u-full-width" type="text" placeholder="password" name="password">
-            <input class="button-primary" type="submit" value="Submit">
-          </div>
+          <p>
+            Please input your password.<br />
+            Your password is your last name and<br />
+            first 2 letters of your first name,<br />
+            all lowercase, no spaces.
+          </p>
+          <input class="password-input" type="text" placeholder="e.g.shenje" name="password"><br/>
+          <input class="button-primary" type="submit" value="Submit">
         </form>
       </div>
       <div class="rsvp-form hidden">

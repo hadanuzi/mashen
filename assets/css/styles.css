@@ -1,25 +1,30 @@
 html {
-    background-color: #051d35;
-    color: #efefef;
+    background-color: #051f34;
+    color: #d09e42;
     height: 100%;
 }
 
 body {
     height: 100%;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7em;
+    font-family: 'Mukta Mahee', sans-serif;
 }
 
 .home { height: 100%; }
 
-.nav { color: #d09e42; }
-
 .page {
-    top: 67px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    min-height: calc(100% - 67px);
+}
+
+.center-text {
+    text-align: center;
+}
+
+.landing-img {
+    margin-bottom: 8%;
 }
 
 .center {
@@ -51,8 +56,10 @@ body {
     min-height: 100%;
 }
 
-.vertical-center-page {
-    justify-content: center;
+.navbar-link {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 450;
 }
 
 .unstyled-ul li {
@@ -60,7 +67,7 @@ body {
 }
 
 textarea, input {
-    color: #051d35;
+    color: #051f34;
 }
 
 .unstyled-ul h5 { margin-bottom: 1rem; }
@@ -73,8 +80,10 @@ textarea, input {
     display: none;
 }
 
-.name {
-    margin-bottom: 15px;
+.names {
+    font-size: 36pt;
+    font-weight: bold;
+    letter-spacing: 3px;
 }
 
 .attendance {
@@ -92,4 +101,53 @@ small.label-body {
 span.label-body {
     margin-bottom: 0px;
     color: #d09e42;
+}
+
+.line {
+    margin-top: 0px;
+    border-top: 1px solid #d09e42;
+}
+
+.footer {
+    margin-top: 5%;
+}
+
+button, .button-primary, input[type="submit"] {
+    height: 50px;
+    font-size: 20pt;
+    color: #051f34;
+    background-color: #d09e42;
+    letter-spacing: 5px;
+    border: none;
+    border-radius: 0px;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.password-input {
+    width: 400px;
+    border: 1px solid #d09e42;
+    color: #d09e42;
+    border-radius: 0px;
+    background-color: #051f34;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #916f30;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #916f30;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #916f30;
+}
+
+#dynamic-food-form {
+    text-align: left;
+}
+.name {
+    margin: 3% 0;
 }
