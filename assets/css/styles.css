@@ -126,6 +126,7 @@ button, .button-primary, input[type="submit"] {
 
 .password-input {
     width: 400px;
+    max-width: 100%;
     border: 1px solid #d09e42;
     color: #d09e42;
     border-radius: 0px;
@@ -150,4 +151,9 @@ button, .button-primary, input[type="submit"] {
 }
 .name {
     margin: 3% 0;
+}
+
+#codeNavPopover {
+    z-index: 99;
+    left: 0px;
 }
