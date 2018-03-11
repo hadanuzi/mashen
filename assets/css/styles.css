@@ -170,3 +170,7 @@ button, .button-primary, input[type="submit"] {
     z-index: 99;
     left: 0px;
 }
+.spinner {
+    width: 30px;
+    margin: 0 auto;
+}

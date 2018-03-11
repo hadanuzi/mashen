@@ -2,7 +2,9 @@
 $(document).ready(function() {
 
   $("#password-form").submit(function(event) {
+    $(this).hide();
     event.preventDefault();
+    $(".spinner").show();
     var data = $('#password-form').serializeArray().reduce(function(obj, item) {
       obj[item.name] = item.value;
       return obj;
@@ -51,20 +53,22 @@ $(document).ready(function() {
         `);
       });
       $(".password-form").hide();
+      $(".spinner").hide();
       $(".rsvp-form").show();
     }).fail(function(err) {
       $(".rsvp-form").hide();
+      $(".spinner").hide();
       $(".error").show();
     });
   });
 
   $("#rsvp-form").submit(function(event) {
+    $(this).hide();
     event.preventDefault();
     var data = $('#rsvp-form').serializeArray().reduce(function(obj, item) {
       obj[item.name] = item.value;
       return obj;
     }, {});
-    console.log(data)
 
     var showNext = false;
     for (i = 0; i < data.guests; i++) {
@@ -75,9 +79,9 @@ $(document).ready(function() {
             <div class="name">
               ${data[`name-${i}`]} will be having the:
             </div>
-            <div class="label" required>
+            <div class="label">
               <label>
-                <input type="radio" name="meal-${i}" value="chicken">
+                <input type="radio" name="meal-${i}" value="chicken" required>
                 <span class="label-body">Pomegranate Glazed Frenched Chicken Breast</span>
                 <small class="label-body">vegetable risotto cake, spring vegetables, rosemary pan sauce</small>
               </label>
@@ -104,6 +108,7 @@ $(document).ready(function() {
       $(".food-form").show();
     } else {
       const rsvp = createRSVP(data, foodData);
+      $(".spinner").show();
       $.ajax({
         type: "POST",
         url: "https://rocky-waters-77986.herokuapp.com/" + data.password,
@@ -112,30 +117,31 @@ $(document).ready(function() {
         dataType: 'json',
       }).done(function() {
         $(".rsvp-form").hide();
+        $(".spinner").hide();
         $(".thank-you").show();
       })
       .fail(function(err) {
         $(".rsvp-form").hide();
+        $(".spinner").hide();
         $(".error").show();
       });
     }
   });
 
-  
   $("#food-form").submit(function(event) {
+    let noFoodSelection = true;
+    $(this).hide();
     event.preventDefault();
     var data = $('#rsvp-form').serializeArray().reduce(function(obj, item) {
       obj[item.name] = item.value;
       return obj;
     }, {});
-    
     var foodData = $('#food-form').serializeArray().reduce(function(obj, item) {
       obj[item.name] = item.value;
       return obj;
     }, {});
-    console.log(data, foodData)
     const rsvp = createRSVP(data, foodData);
-    console.log('rsvp', rsvp)
+    $(".spinner").show();
     $.ajax({
       type: "POST",
       url: "https://rocky-waters-77986.herokuapp.com/" + data.password,
@@ -143,10 +149,12 @@ $(document).ready(function() {
       contentType: 'application/json'
     }).done(function() {
       $(".food-form").hide();
+      $(".spinner").hide();
       $(".thank-you").show();
     })
     .fail(function(err) {
       $(".food-form").hide();
+      $(".spinner").hide();
       $(".error").show();
     });
   });
