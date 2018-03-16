@@ -81,14 +81,14 @@ ${data[`name-${i}`]} will be having the:
 </div>
 <div class="label">
 <label>
-<input type="radio" name="meal-${i}" value="chicken" required>
-<span class="label-body">Pomegranate Glazed Frenched Chicken Breast</span>
-<small class="label-body">vegetable risotto cake, spring vegetables, rosemary pan sauce</small>
+<input type="radio" name="meal-${i}" value="salmon" required>
+<span class="label-body">Citrus Herb Grilled Salmon Fillet</span>
+<small class="label-body">sauteed greens, crushed Yukon potato cake, roasted tomato sauce</small>
 </label>
 <label>
-<input type="radio" name="meal-${i}" value="salmon">
-<span class="label-body">Salmon topped with Roasted Tomato Olive Crumbs</span>
-<small class="label-body">sauteed greens, saffron orzo risotto, roasted tomato sauce</small>
+<input type="radio" name="meal-${i}" value="steak">
+<span class="label-body">Churrascaria Flank Steak</span>
+<small class="label-body">feijoada, sauteed vegetables, plantain chips</small>
 </label>
 <label>
 <input type="radio" name="meal-${i}" value="tofu">

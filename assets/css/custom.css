@@ -27,7 +27,7 @@
   line-height: 6.5rem;
   color: #d09e42; }
 .navbar-link.active {
-  color: #33C3F0; }
+  color: #fff; }
 
 /* Popover */
 .popover.open {
