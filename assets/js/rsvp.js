@@ -17,40 +17,40 @@ $(document).ready(function() {
     .done(function(data) {
       var guests = Object.keys(data);
       $('#dynamic-form').append(`
-        <input type="hidden" name="guests" value=${guests.length}>
-        <input type="hidden" name="password" value=${password}>
-      `);
+<input type="hidden" name="guests" value=${guests.length}>
+<input type="hidden" name="password" value=${password}>
+`);
       guests.forEach(function(guest, i) {
         var name = guest;
         if (guest === '+1') {
           name = 'Your plus one';
         }
         $('#dynamic-form').append(`
-          <div class="attendance">
-            <div class="name">
-              ${name} will be attending the:
-            </div>
-            <div class="attendance-boxes">
-              <input type="hidden" name="name-${i}" value="${name}">
-              <label>
-                <input type="checkbox" name="preparty-${i}">
-                <span class="label-body">Pre-party</span>
-              </label>
-              <label>
-                <input type="checkbox" name="wedding-${i}">
-                <span class="label-body">Wedding</span>
-              </label>
-              <label>
-                <input type="checkbox" name="afterparty-${i}">
-                <span class="label-body">After Party</span>
-              </label>
-              <label>
-                <input type="checkbox" name="brunch-${i}">
-                <span class="label-body">Brunch</span>
-              </label>
-            </div>
-          </div>
-        `);
+<div class="attendance">
+<div class="name">
+${name} will be attending the:
+</div>
+<div class="attendance-boxes">
+<input type="hidden" name="name-${i}" value="${name}">
+<label>
+<input type="checkbox" name="preparty-${i}">
+<span class="label-body">Pre-party</span>
+</label>
+<label>
+<input type="checkbox" name="wedding-${i}">
+<span class="label-body">Wedding</span>
+</label>
+<label>
+<input type="checkbox" name="afterparty-${i}">
+<span class="label-body">After Party</span>
+</label>
+<label>
+<input type="checkbox" name="brunch-${i}">
+<span class="label-body">Brunch</span>
+</label>
+</div>
+</div>
+`);
       });
       $(".password-form").hide();
       $(".spinner").hide();
@@ -75,35 +75,35 @@ $(document).ready(function() {
       showNext = true;
       if (data[`wedding-${i}`] === "on") {
         $('#dynamic-food-form').append(`
-          <div>
-            <div class="name">
-              ${data[`name-${i}`]} will be having the:
-            </div>
-            <div class="label">
-              <label>
-                <input type="radio" name="meal-${i}" value="chicken" required>
-                <span class="label-body">Pomegranate Glazed Frenched Chicken Breast</span>
-                <small class="label-body">vegetable risotto cake, spring vegetables, rosemary pan sauce</small>
-              </label>
-              <label>
-                <input type="radio" name="meal-${i}" value="salmon">
-                <span class="label-body">Salmon topped with Roasted Tomato Olive Crumbs</span>
-                <small class="label-body">sauteed greens, saffron orzo risotto, roasted tomato sauce</small>
-              </label>
-              <label>
-                <input type="radio" name="meal-${i}" value="tofu">
-                <span class="label-body">Panko Tofu "Scallops"</span>
-                <small class="label-body">bok choy ponzu</small>
-              </label>
-            </div>
-          </div>
-        `);
+<div>
+<div class="name">
+${data[`name-${i}`]} will be having the:
+</div>
+<div class="label">
+<label>
+<input type="radio" name="meal-${i}" value="chicken" required>
+<span class="label-body">Pomegranate Glazed Frenched Chicken Breast</span>
+<small class="label-body">vegetable risotto cake, spring vegetables, rosemary pan sauce</small>
+</label>
+<label>
+<input type="radio" name="meal-${i}" value="salmon">
+<span class="label-body">Salmon topped with Roasted Tomato Olive Crumbs</span>
+<small class="label-body">sauteed greens, saffron orzo risotto, roasted tomato sauce</small>
+</label>
+<label>
+<input type="radio" name="meal-${i}" value="tofu">
+<span class="label-body">Panko Tofu "Scallops"</span>
+<small class="label-body">bok choy ponzu</small>
+</label>
+</div>
+</div>
+`);
       }
     }
     if (showNext) {
       $('#dynamic-food-form').append(`
-        <textarea class="u-full-width" placeholder="Please include any dietary restrictions here." name="diet"></textarea>
-      `);
+<textarea class="u-full-width" placeholder="Please include any dietary restrictions here." name="diet"></textarea>
+`);
       $(".rsvp-form").hide();
       $(".food-form").show();
     } else {
@@ -161,8 +161,13 @@ $(document).ready(function() {
 
   function createRSVP(data, foodData) {
     var rsvp = {};
+    let baseName = data[`name-0`];
     for (i = 0; i < data.guests; i++) {
-      rsvp[data[`name-${i}`]] = {
+      let name = data[`name-${i}`];
+      if (name === 'Your plus one') {
+        name = `${baseName}'s +1`;
+      }
+      rsvp[name] = {
         preparty: data[`preparty-${i}`] === 'on' ? 'yes' : 'no',
         wedding: data[`wedding-${i}`] === 'on' ? 'yes' : 'no',
         afterParty: data[`afterparty-${i}`] === 'on' ? 'yes' : 'no',
