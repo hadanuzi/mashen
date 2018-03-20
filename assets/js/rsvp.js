@@ -72,8 +72,8 @@ ${name} will be attending the:
 
     var showNext = false;
     for (i = 0; i < data.guests; i++) {
-      showNext = true;
       if (data[`wedding-${i}`] === "on") {
+        showNext = true;
         $('#dynamic-food-form').append(`
 <div>
 <div class="name">
@@ -107,14 +107,14 @@ ${data[`name-${i}`]} will be having the:
       $(".rsvp-form").hide();
       $(".food-form").show();
     } else {
-      const rsvp = createRSVP(data, foodData);
+      const rsvp = createRSVP(data);
+      console.log(rsvp)
       $(".spinner").show();
       $.ajax({
         type: "POST",
         url: "https://rocky-waters-77986.herokuapp.com/" + data.password,
         data: JSON.stringify(rsvp),
         contentType: 'application/json',
-        dataType: 'json',
       }).done(function() {
         $(".rsvp-form").hide();
         $(".spinner").hide();
@@ -159,7 +159,7 @@ ${data[`name-${i}`]} will be having the:
     });
   });
 
-  function createRSVP(data, foodData) {
+  function createRSVP(data, foodData = {}) {
     var rsvp = {};
     let baseName = data[`name-0`];
     for (i = 0; i < data.guests; i++) {
